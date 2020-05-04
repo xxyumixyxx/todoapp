@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="ja">
+<head>
+    <meta charset= "UTF-8">
+    <title><%= title %></title>
+    <link rel= 'stylesheet' href='/stylesheets/userlogin.css'>
+</head>
+<body>
+    <header>
+        <div class= "app-name">To Do App</div>
+    </header>
+    <main>
+        <h2>Who Are You?</h2>
+        <div class= "login">
+            <form action= "/login" method= "POST">
+                <input type= "text" name= "username" placeholder= "Yourname"/>
+                <input type= "password" name= "password" placeholder="Password"/>
+                <input type= "submit" value= "Login!"/>
+            </form> 
+        </div>
+        <div class= "create-user">
+            <h2>User Create!</h2>
+            <p>passport.jsが使えたらコーディングしていきます。</p>
+        </div>
+    </main>
+    <footer>
+        <div class= "footer">©xxYumixyxx</div>
+    </footer>
+</body>
+</html> 
