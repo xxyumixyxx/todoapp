@@ -6,6 +6,7 @@ var logger = require('morgan');
 //ログイン画面でformを使用するため
 const bodyParser = require('body-Parser');
 
+//各routerでurlと処理内容を記述していく
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
