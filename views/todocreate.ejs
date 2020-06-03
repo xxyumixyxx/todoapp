@@ -14,13 +14,7 @@
             <div class= "left-container">
                 <nav>
                     <ul>
-                        <!-- <li><a href="todocreate.ejs">
-                            <button type= "button">To Do Create</button>
-                        </a></li> -->
-
-                        <!-- ボタンをしても画面遷移しない・・・・なんでーー404エラー -->
-                        <button type= "button" onclick= "location.href= 'todocreate.ejs'">To Do Create</button>
-                        <li><button type= "button" onclick= "location.href= 'todosearch.ejs'">To Do Search</button></li>
+                        <li><button type= "button" onclick= "location.href= './todosearch.ejs'">To Do Search</button></li>
                         <li><button type= "button" onclick= "location.href= './tododelete.ejs'">To Do Delete</button></li>
                     </ul>
                 </nav>
@@ -30,14 +24,23 @@
             </div>
             <div class= "right-cotainer">
                 <div class= "todo-area">
-                    <h2>Today's To Do..</h2>
-                    <p>9:00  ～  10:00 ------やること------  □</p><br>
-                    <p>9:00  ～  10:00 ------やること------  □</p><br>
-                    <p>9:00  ～  10:00 ------やること------  □</p><br>
-                    <p>9:00  ～  10:00 ------やること------  □</p><br>
-                    <p>9:00  ～  10:00 ------やること------  □</p><br>
-                    <p>9:00  ～  10:00 ------やること------  □</p><br>
-                    <input type= "submit" name= "check-add" value= "Add!">
+                    <h2>To Do Create</h2>
+                    <form action= "/todocreate" method= "post">
+                    <p>予定日付</p>
+                    <p>予定時間</p>
+                    <p>やること<br>
+                        <input type= "text" name= "todo">
+                    </p>
+                    <p>カテゴリー<br>
+                        <input type= "radio" name= "category" value= "1">仕事
+                        <input type= "radio" name= "category" value= "2">日常
+                        <input type= "radio" name= "category" value= "3">遊び
+                        <input type= "radio" name= "category" value= "4">趣味
+                        <input type= "radio" name= "category" value= "5">習い事
+                    </p>
+                    <input type="submit" name= "create-add" value= "Add!">
+
+                    </form>
                 </div>
                 <form action= "/alltodo" method= "post" class= "button-list">
                     <button type= "button" onclick= "location.href= './tommorow-todo.ejs'">Tommorow's To Do</button>
