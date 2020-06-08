@@ -14,14 +14,11 @@
             <div class= "left-container">
                 <nav>
                     <ul>
-                        <!-- <li><a href="todocreate.ejs">
-                            <button type= "button">To Do Create</button>
-                        </a></li> -->
 
-                        <!-- ボタンをしても画面遷移しない・・・・なんでーー404エラー -->
-                        <button type= "button" onclick= "location.href= 'todocreate.ejs'">To Do Create</button>
-                        <li><button type= "button" onclick= "location.href= 'todosearch.ejs'">To Do Search</button></li>
-                        <li><button type= "button" onclick= "location.href= './tododelete.ejs'">To Do Delete</button></li>
+                        <!--ルーティングで、レンダリングしないと動的ファイルはブラウザ上で表示できない-->
+                        <button type= "button" onclick= "location.href= '/check'">To Do Create</button>
+                        <li><button type= "button" onclick= "location.href= 'todosearch.ejsを表示'">To Do Search</button></li>
+                        <li><button type= "button" onclick= "location.href= './tododelete.ejsを表示'">To Do Delete</button></li>
                     </ul>
                 </nav>
                 <div class= "calender">

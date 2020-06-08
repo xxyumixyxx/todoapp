@@ -18,15 +18,23 @@ router.post('/login', function(req, res, next){
   if(req.body.username === "test" && req.body.password === "a12345"){
     // ログイン成功
     // "req.session.user"にユーザー情報の確認が取れた確証としてオブジェクトを格納しておく
-    req.session.user = { password:"a12345" };
+    req.session.user = { username:"test" };
     // userhome.ejsへ遷移
     res.render('userhome', { title: 'ToDoApp_userhome' });  
   }else{
     //　ログイン失敗
     // 条件に外れたら、userlogin.ejsに戻る
-    res.render('userlogin', { title: 'ToDoApp_Login' });
+    // res.render('userlogin', { title: 'ToDoApp_Login' });
+    res.redirect('/login', { title: 'ToDoApp_Login' });
+    
   }
   
+});
+
+//ejsファイルが表示されるか確認。できない！！！！！
+router.get('/check', function(req, res, next) {
+  //todocreate.ejsをrenderして画面を取得
+  res.render('todocreate', { title: 'ToDoApp_Create' });
 });
 
 module.exports = router;
